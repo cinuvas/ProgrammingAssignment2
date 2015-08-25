@@ -1,3 +1,22 @@
+##How to Test the Script
+* Compile both the function makeCacheMatrix & cacheSolve first in the same order.
+* Run the below scripts to test it with a sample matrix
+
+N <- 5
+
+NM <- matrix(rnorm(N*N,mean=0,sd=1), N, N)
+
+dim (NM)
+
+NM
+
+INM <- makeCacheMatrix(NM)
+
+cacheSolve(INM)
+
+Note :- Only when you execute the "cacheSolve(INM)" for the first time it will actually inverse your matrix. When you run "cacheSolve(INM)" for the next & onwards it will fetch it from cache, So you results will be accompanined by a text "getting cached data".
+
+
 ### Introduction
 
 This second programming assignment will require you to write an R
